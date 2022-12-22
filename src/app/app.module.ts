@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ItemComponent } from './item/item.component';
+import { QuantitySelectorComponent } from './quantity-selector/quantity-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemComponent
+    ItemComponent,
+    QuantitySelectorComponent
   ],
   imports: [
     BrowserModule,
