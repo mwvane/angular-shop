@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
     ItemComponent,
     QuantitySelectorComponent,
     CartComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

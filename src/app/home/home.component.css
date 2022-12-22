@@ -1,9 +1,10 @@
 .main-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .item {
-    margin: 4px;
-    display: flex;
-  }
-  
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  margin: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 19%;
+}

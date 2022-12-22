@@ -1,3 +1,9 @@
 <div class="main-container">
-    <app-item *ngFor="let item of cartItems"></app-item>
+  <app-item
+    *ngFor="let item of cartItems"
+    [cardType]="'cart'"
+    [item]="item"
+    (delete)="onDelete($event)"
+    (updateQuantity)="onQuantityUpdate(item)"
+  ></app-item>
 </div>

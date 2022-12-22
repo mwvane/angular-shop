@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class QuantitySelectorComponent {
   @Output() update: EventEmitter<number> = new EventEmitter();
-  quantity: number = 1;
+  @Input() quantity: number = 1
   onMinus() {
     if (this.quantity > 1) {
       this.quantity--;

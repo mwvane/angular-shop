@@ -12,5 +12,10 @@ export class CartComponent {
 
   }
   cartItems: Item[] = this.itemService.getCartItems()
-
+  onDelete(id: number){
+    this.itemService.deleteItem(id)
+  }
+  onQuantityUpdate(item: Item) {
+    this.itemService.updateQuantity(item.id, item.quantity)
+  }
 }

@@ -1,13 +1,28 @@
 <div class="main-container">
-    <div class="item-image">
-        <img src="/assets/jacket.jpg" class="item-image" alt="no image">
+  <div class="item-image">
+    <img src="/assets/jacket.jpg" class="item-image" alt="no image" />
+  </div>
+  <div class="details">
+    <h3 style="color: black">{{ item.name }}</h3>
+    <span>Price: {{ item.price }}$</span><br>
+    <span>totoal price: {{ item.price * item.quantity }}$</span>
+  </div>
+  <div class="action">
+    <app-quantity-selector
+      (update)="quantityUpdate($event)"
+      [quantity]="item.quantity"
+    ></app-quantity-selector>
+    <div *ngIf="cardType === 'item'">
+      <button class="btn-rounded" (click)="addToCart()">
+        <fa-icon [icon]="cart"> </fa-icon> Add to cart
+      </button>
     </div>
-    <div class="details">
-        <h3 style="color:black">{{item.name}}</h3>
-        <span>Price: {{item.price}}$</span>
+    <div *ngIf="cardType === 'cart'">
+        <button class="btn-rounded">
+        <fa-icon [icon]="dollar"> </fa-icon> Buy
+        </button>
+        <button class="btn-rounded" style="margin-left: 2px;" (click)="onDelete()">
+            <fa-icon [icon]="trashIcon" style="color:red"> </fa-icon></button>
     </div>
-    <div class="action">
-        <app-quantity-selector (update)="quantityUpdate($event)"></app-quantity-selector>
-        <button class="btn-rounded"(click)="addToCart()" ><fa-icon [icon]="cart"> </fa-icon> Add to cart</button>
-    </div>
+  </div>
 </div>
