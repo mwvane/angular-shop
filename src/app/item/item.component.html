@@ -1,1 +1,13 @@
-<p>item works!</p>
+<div class="main-container">
+    <div class="item-image">
+        <img src="/assets/jacket.jpg" class="item-image" alt="no image">
+    </div>
+    <div class="details">
+        <h3 style="color:black">Sport jacket</h3>
+        <span>Price: 500$</span>
+    </div>
+    <div class="action">
+        <app-quantity-selector (update)="quantityUpdate($event)"></app-quantity-selector>
+        <button class="btn-rounded"><fa-icon [icon]="cart"> </fa-icon> Add to cart</button>
+    </div>
+</div>
