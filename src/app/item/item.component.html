@@ -3,11 +3,11 @@
         <img src="/assets/jacket.jpg" class="item-image" alt="no image">
     </div>
     <div class="details">
-        <h3 style="color:black">Sport jacket</h3>
-        <span>Price: 500$</span>
+        <h3 style="color:black">{{item.name}}</h3>
+        <span>Price: {{item.price}}$</span>
     </div>
     <div class="action">
         <app-quantity-selector (update)="quantityUpdate($event)"></app-quantity-selector>
-        <button class="btn-rounded"><fa-icon [icon]="cart"> </fa-icon> Add to cart</button>
+        <button class="btn-rounded"(click)="addToCart()" ><fa-icon [icon]="cart"> </fa-icon> Add to cart</button>
     </div>
 </div>

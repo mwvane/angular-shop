@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { faL } from '@fortawesome/free-solid-svg-icons';
 import { Item } from './model.item';
 
 @Injectable({ providedIn: 'root' })
@@ -13,11 +12,14 @@ export class ItemService {
     { id: 6, name: 'sport Jacket', price: 100, quantity: 12 },
     { id: 7, name: 'sport Jacket', price: 100, quantity: 12 },
   ];
-  private cart: Item[] = [];
-  addToCart(id: number) {
-    const item = this.items.find((item) => item.id == id);
+  private cart: Item[] = [
+    
+  ];
+  addToCart(item: Item) {
     if (item) {
-      this.cart.unshift(item);
+        if(!this.cart.find(cartItem => cartItem.id === item.id)){
+            this.cart.unshift(item);
+        }
       return true;
     }
     return false;
@@ -35,5 +37,11 @@ export class ItemService {
     if (item) {
       item.quantity = quantity;
     }
+  }
+  getItems(){
+    return this.items
+  }
+  getCartItems(){
+    return this.cart
   }
 }

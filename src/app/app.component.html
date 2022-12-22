@@ -1,3 +1,9 @@
-<div class="mian-container">
-  <app-item></app-item>
+<div class="main-container">
+  <header>
+    <div class="cart">
+      <fa-icon [icon]="cartIcon" (click)="onCart()"></fa-icon>
+      <span style="margin-left: 4px;">({{cartItemsCount.length}})</span>
+    </div>
+  </header>
+  <router-outlet></router-outlet>
 </div>

@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ItemComponent } from './item/item.component';
 import { QuantitySelectorComponent } from './quantity-selector/quantity-selector.component';
+import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemComponent,
-    QuantitySelectorComponent
+    QuantitySelectorComponent,
+    CartComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
